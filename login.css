@@ -1,0 +1,243 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height:100%;
+  overflow: hidden;
+  --s: 37px; /* control the size */
+
+  --c: #e7ff1373, #e7ff1373 0.5deg 119.5deg, #e4000000 120deg;
+  --g1: conic-gradient(from 60deg at 56.25% calc(425% / 6), var(--c));
+  --g2: conic-gradient(from 180deg at 43.75% calc(425% / 6), var(--c));
+  --g3: conic-gradient(from -60deg at 50% calc(175% / 12), var(--c));
+  background: var(--g1), var(--g1) var(--s) calc(1.73 * var(--s)), var(--g2),
+    var(--g2) var(--s) calc(1.73 * var(--s)), var(--g3) var(--s) 0,
+    var(--g3) 0 calc(1.73 * var(--s)) #d80000;
+  background-size: calc(2 * var(--s)) calc(3.46 * var(--s));
+
+}
+.ludoimg{
+  width: 70%;
+  height: 80%;
+  position: absolute;
+  top: 10%;
+  left: 35%;
+  z-index: -1;
+  
+  border-radius: 10px;
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
+}
+
+.background {
+  
+  width: 430px;
+  height: 520px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+.background .shape {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.shape:first-child {
+  background: linear-gradient(#1845ad,
+      #23a2f6);
+  left: -100%;
+  top: -80px;
+  z-index: -3px;
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
+
+}
+
+.shape:last-child {
+  background: linear-gradient(to right,
+      #ff512f,
+      #f09819);
+  right: 270px;
+  bottom: -80px;
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
+
+}
+
+form {
+  height: 80%;
+  width: 400px;
+  background-color: rgba(231, 166, 44, 0);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 23%;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  padding: 50px 35px;
+}
+
+form * {
+  font-family: 'Poppins', sans-serif;
+  color: #3f50e6;
+  letter-spacing: 0.5px;
+  outline: none;
+  border: none;
+}
+
+form h3 {
+  
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 4px;
+  text-align: center;
+  color: #ecba56;
+}
+
+label {
+  display: block;
+  margin-top: 30px;
+  font-size:larger;
+  font-weight: 500;
+}
+
+input {
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(250, 247, 247, 0);
+  border-bottom: 2px solid #ffd277;
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size:larger;
+  font-weight: 900;
+  color: #000000;
+
+}
+#pass{
+color: #fa5939;
+}
+
+::placeholder {
+  color: #000000;
+  opacity: 40;
+  font-size: 16px;
+}
+.Btn {
+  width: 70%;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right,#77530a,#ffd277,#77530a,#77530a,#ffd277,#77530a);
+  background-size: 250%;
+  background-position: left;
+  color: #ffd277;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 1s;
+  overflow: hidden;
+  left: 12%;
+}
+
+.Btn::before {
+  position: absolute;
+  content: "Login";
+  color: #ffd277;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 97%;
+  height: 90%;
+  border-radius: 8px;
+  transition-duration: 1s;
+  background-color: rgba(0, 0, 0, 0.842);
+  background-size: 200%;
+}
+
+.Btn:hover {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.Btn:hover::before {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.Btn:active {
+  transform: scale(0.95);
+}
+
+.social {
+  margin-top: 30px;
+  display: flex;
+}
+
+.social div {
+  background: red;
+  width: 150px;
+  border-radius: 3px;
+  padding: 5px 10px 10px 5px;
+  color: #0747be;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right,#77530a,#ffd277,#77530a,#77530a,#ffd277,#77530a);
+  background-size: 250%;
+  color: #ffffff;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.social.fb:hover {
+  color: #ffd277;
+  position: fixed;
+  
+  border-radius: 8px;
+  
+}
+
+.social.go:hover {
+  color: #ffd277;
+  position: fixed;
+  
+  border-radius: 8px;
+  
+}
+
+.social .fb {
+  margin-left: 25px;
+}
+
+.social i {
+  margin-right: 4px;
+}
+
+
+
+.tenor-gif-embed{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+
+}
